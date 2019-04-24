@@ -1,5 +1,6 @@
 # changelogkeeper [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
-> Write changelog using keepachangelog conventions
+
+> Write changelog using [keepachangelog](https://keepachangelog.com/en/1.0.0/) conventions
 
 ## Installation
 
@@ -9,15 +10,26 @@ $ npm install --save changelogkeeper
 
 ## Usage
 
-```js
-const changelogkeeper = require('changelogkeeper');
+Add these scripts to package.json:
 
-changelogkeeper('Rainbow');
+```json
+"scripts": {
+  "commitChangelog": "git add CHANGELOG.md && git commit -m 'Bump changelog'",
+  "postversion": "npm run changelogkeeper && npm run commitChangelog"
+}
 ```
+
+And then run [npm version](https://docs.npmjs.com/cli/version.html):
+
+```sh
+npm version [major | minor | patch | ...]
+```
+
+It will read the package version and update the changelog accordingly.
+
 ## License
 
 MIT © [Francisco Kahil]()
-
 
 [npm-image]: https://badge.fury.io/js/changelogkeeper.svg
 [npm-url]: https://npmjs.org/package/changelogkeeper
