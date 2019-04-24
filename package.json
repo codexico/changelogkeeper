@@ -5,8 +5,9 @@
     "pretest": "eslint .",
     "test": "jest",
     "changelogkeeper": "node -e 'require(\"./lib/index.js\").changelogkeeper()'",
+    "commitChagelog": "git add CHANGELOG.md && git commit -m 'Add changelog'",
     "preversion": "npm test",
-    "postversion": "npm run changelogkeeper && git commit -m 'Add changelog'"
+    "postversion": "npm run changelogkeeper && npm run commitChangelog"
   },
   "description": "Write changelog using keepachangelog conventions",
   "homepage": "",
