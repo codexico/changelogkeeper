@@ -1,6 +1,6 @@
 {
   "name": "changelogkeeper",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "scripts": {
     "pretest": "eslint .",
     "test": "jest",
