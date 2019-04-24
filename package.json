@@ -69,7 +69,13 @@
   },
   "repository": "codexico/changelogkeeper",
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "coverageReporters": [
+      "lcov",
+      "text",
+      "text-summary"
+    ]
   },
   "license": "MIT"
 }
