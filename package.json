@@ -6,7 +6,7 @@
     "test": "jest",
     "changelogkeeper": "node -e 'require(\"./lib/index.js\").changelogkeeper()'",
     "preversion": "npm test",
-    "postversion": "npm run changelogkeeper"
+    "postversion": "npm run changelogkeeper && git commit -m 'Add changelog'"
   },
   "description": "Write changelog using keepachangelog conventions",
   "homepage": "",
