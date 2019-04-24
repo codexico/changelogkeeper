@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Repository on github
 
+### Removed
+
+- Remove support for node v4
+
 ## [0.1.5] - 2019-04-24
 
 ### Added
