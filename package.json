@@ -10,7 +10,7 @@
     "postversion": "npm run changelogkeeper && npm run commitChangelog"
   },
   "description": "Write changelog using keepachangelog conventions",
-  "homepage": "",
+  "homepage": "https://github.com/codexico/changelogkeeper",
   "author": {
     "name": "Francisco Kahil",
     "email": "codexico@gmail.com",
