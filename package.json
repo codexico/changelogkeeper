@@ -5,6 +5,7 @@
     "pretest": "eslint .",
     "test": "jest",
     "changelogkeeper": "node -e 'require(\"./lib/index.js\").changelogkeeper()'",
+    "preversion": "npm test",
     "postversion": "npm run changelogkeeper"
   },
   "description": "Write changelog using keepachangelog conventions",
