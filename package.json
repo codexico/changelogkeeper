@@ -20,6 +20,9 @@
     "lib"
   ],
   "main": "lib/index.js",
+  "bin": {
+    "changelogkeeper": "lib/runner.js"
+  },
   "keywords": [
     "changelog",
     "version",
