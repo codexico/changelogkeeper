@@ -29,6 +29,82 @@ npm version [major | minor | patch | ...]
 
 It will read the package version and update the changelog accordingly.
 
+### Example
+
+Before:
+
+```json
+// package.json
+{
+  ...
+  "version": "3.1.4",
+  ...
+}
+```
+
+```md
+// CHANGELOG.md
+
+# Changelog
+
+## [Unreleased]
+
+### Added
+
+- Some new Feature
+
+## [3.1.4] - 2018-02-04
+
+### Fixed
+
+- Fixed something
+
+## [3.1.3] - 2018-02-03
+
+...
+```
+
+Then run:
+
+```sh
+npm version minor
+```
+
+After:
+
+```json
+// package.json
+{
+  ...
+  "version": "3.2.0",
+  ...
+}
+```
+
+```md
+// CHANGELOG.md
+
+# Changelog
+
+## [Unreleased]
+
+## [3.2.0] - 2018-02-04
+
+### Added
+
+- Some new Feature
+
+## [3.1.4] - 2018-02-04
+
+### Fixed
+
+- Fixed something
+
+## [3.1.3] - 2018-02-03
+
+...
+```
+
 ## Development
 
 Don't forget to run `npm link` so changelogkeeper can run itself.
