@@ -4,10 +4,13 @@
   "scripts": {
     "pretest": "eslint .",
     "test": "jest",
-    "changelogkeeper": "node -e 'require(\"./lib/index.js\").changelogkeeper()'",
-    "commitChangelog": "git add CHANGELOG.md && git commit -m 'Bump changelog'",
     "preversion": "npm test",
-    "postversion": "npm run changelogkeeper && npm run commitChangelog"
+    "prepublishOnly": "npm test",
+    "linked": "changelogkeeper",
+    "index": "node -e 'require(\"./lib/index.js\").changelogkeeper()'",
+    "runner": "node -e 'require(\"./lib/runner.js\")'",
+    "commitChangelog": "git add CHANGELOG.md && git commit -m 'Bump changelog'",
+    "postversion": "changelogkeeper && npm run commitChangelog"
   },
   "description": "Write changelog using keepachangelog conventions",
   "homepage": "https://github.com/codexico/changelogkeeper",

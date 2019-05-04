@@ -14,8 +14,10 @@ Add these scripts to package.json:
 
 ```json
 "scripts": {
+  ...
   "commitChangelog": "git add CHANGELOG.md && git commit -m 'Bump changelog'",
-  "postversion": "npm run changelogkeeper && npm run commitChangelog"
+  "postversion": "changelogkeeper && npm run commitChangelog",
+  ...
 }
 ```
 
@@ -26,6 +28,10 @@ npm version [major | minor | patch | ...]
 ```
 
 It will read the package version and update the changelog accordingly.
+
+## Development
+
+Don't forget to run `npm link` so changelogkeeper can run itself.
 
 ## License
 
