@@ -5,7 +5,7 @@
 ## Installation
 
 ```sh
-$ npm install --save changelogkeeper
+$ npm install --save-dev changelogkeeper
 ```
 
 ## Usage
