@@ -13,6 +13,7 @@ $ npm install --save-dev changelogkeeper
 Add these scripts to package.json:
 
 ```json
+// package.json
 "scripts": {
   ...
   "commitChangelog": "git add CHANGELOG.md && git commit -m 'Bump changelog'",
@@ -28,6 +29,15 @@ npm version [major | minor | patch | ...]
 ```
 
 It will read the package version and update the changelog accordingly.
+
+### Options
+
+If you have your changelog in another location you can pass the relative path like this:
+
+```json
+// package.json
+"postversion": "changelogkeeper '../CHANGELOG.md' && npm run commitChangelog"
+```
 
 ### Example
 
